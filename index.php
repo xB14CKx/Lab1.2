@@ -16,7 +16,9 @@ if (!isset($_SESSION['user_id'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detailing</title>
     <link rel="stylesheet" href="statics/css/bootstrap.css">
+    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <script src="statics/js/bootstrap.bundle.js"></script>
+
 </head>
 
 <body>
@@ -68,7 +70,7 @@ if (!isset($_SESSION['user_id'])) {
                         <input type="text" class="form-control" id="bgry" name="bgry">
                     </div>
                     <div class="d-grid">
-                        <button type="button" class="btn btn-primary mt-3" onclick="validateAndShowModal()"><svg
+                        <button type="button" class="btn btn-primary mt-3" onclick="validateAndShowModal()"> <svg
                                 xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round"
@@ -81,8 +83,8 @@ if (!isset($_SESSION['user_id'])) {
                                 <path d="M12.5 3a16.996 16.996 0 0 1 2.391 11.512" />
                                 <path d="M19 22v-6" />
                                 <path d="M22 19l-3 -3l-3 3" />
-                            </svg>Submit</button>
-                        <button type="button" class="btn btn-warning mt-3" onclick="showEditModal()"><svg
+                            </svg> Submit</button>
+                        <button type="button" class="btn btn-warning mt-3" onclick="showEditModal()"> <svg
                                 xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-edit">
@@ -90,9 +92,9 @@ if (!isset($_SESSION['user_id'])) {
                                 <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" />
                                 <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" />
                                 <path d="M16 5l3 3" />
-                            </svg>Edit</button>
+                            </svg> Edit</button>
                         <button type="button" class="btn btn-secondary mt-3" data-bs-toggle="modal"
-                            data-bs-target="#grabDetailsModal"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                            data-bs-target="#grabDetailsModal"> <svg xmlns="http://www.w3.org/2000/svg" width="24"
                                 height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                 stroke-linecap="round" stroke-linejoin="round"
                                 class="icon icon-tabler icons-tabler-outline icon-tabler-hand-grab">
@@ -102,25 +104,26 @@ if (!isset($_SESSION['user_id'])) {
                                 <path d="M14 7.5a1.5 1.5 0 0 1 3 0v2.5" />
                                 <path
                                     d="M17 9.5a1.5 1.5 0 0 1 3 0v4.5a6 6 0 0 1 -6 6h-2h.208a6 6 0 0 1 -5.012 -2.7l-.196 -.3c-.312 -.479 -1.407 -2.388 -3.286 -5.728a1.5 1.5 0 0 1 .536 -2.022a1.867 1.867 0 0 1 2.28 .28l1.47 1.47" />
-                            </svg>Grab Details</button>
+                            </svg> Grab Details</button>
                         <button type="button" class="btn btn-danger mt-3" data-bs-toggle="modal"
-                            data-bs-target="#deleteModal"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                viewBox="0 0 24 24" fill="currentColor"
+                            data-bs-target="#deleteModal"> <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="currentColor"
                                 class="icon icon-tabler icons-tabler-filled icon-tabler-backspace">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                 <path
                                     d="M20 5a2 2 0 0 1 1.995 1.85l.005 .15v10a2 2 0 0 1 -1.85 1.995l-.15 .005h-11a1 1 0 0 1 -.608 -.206l-.1 -.087l-5.037 -5.04c-.809 -.904 -.847 -2.25 -.083 -3.23l.12 -.144l5 -5a1 1 0 0 1 .577 -.284l.131 -.009h11zm-7.489 4.14a1 1 0 0 0 -1.301 1.473l.083 .094l1.292 1.293l-1.292 1.293l-.083 .094a1 1 0 0 0 1.403 1.403l.094 -.083l1.293 -1.292l1.293 1.292l.094 .083a1 1 0 0 0 1.403 -1.403l-.083 -.094l-1.292 -1.293l1.292 -1.293l.083 -.094a1 1 0 0 0 -1.403 -1.403l-.094 .083l-1.293 1.292l-1.293 -1.292l-.094 -.083l-.102 -.07z" />
-                            </svg>Delete</button>
-                        <a href="logout.php" class="btn btn-danger mt-3"><svg xmlns="http://www.w3.org/2000/svg"
-                                width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            </svg> Delete</button>
+                        <a href="handlers/logout.php" class="btn btn-danger mt-3"> <svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
                                 class="icon icon-tabler icons-tabler-outline icon-tabler-logout">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                 <path
                                     d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2" />
                                 <path d="M9 12h12l-3 -3" />
                                 <path d="M18 15l3 -3" />
-                            </svg>Logout</a>
+                            </svg> Logout</a>
                     </div>
                 </form>
             </div>
